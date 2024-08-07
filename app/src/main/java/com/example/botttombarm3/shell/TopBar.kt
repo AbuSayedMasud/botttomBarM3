@@ -15,7 +15,7 @@ fun TopBar() {
     TopAppBar(
         title = { Text("My App") },
         actions = {
-            IconButton(onClick = { /* Do something */ }) {
+            IconButton(onClick = { }) {
                 Icon(Icons.Default.Search, contentDescription = "Search")
             }
         }

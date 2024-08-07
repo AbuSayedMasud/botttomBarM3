@@ -1,5 +1,6 @@
 package com.example.botttombarm3.shell
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
@@ -9,6 +10,7 @@ import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
+import androidx.compose.material3.NavigationBarDefaults
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.Text
@@ -30,7 +32,10 @@ fun BottomNavBar(
     navController: NavController,
     currentSelectedScreen: RootScreen
 ) {
-    NavigationBar {
+    NavigationBar(
+        containerColor= Color.White,
+    ) {
+
         NavigationBarItem(
             selected = currentSelectedScreen == RootScreen.Home,
             onClick = { navController.navigateToRootScreen(RootScreen.Home) },
@@ -105,7 +110,6 @@ fun BottomNavBar(
         )
     }
 }
-
 @Stable
 @Composable
 fun NavController.currentScreenAsState(): State<RootScreen> {

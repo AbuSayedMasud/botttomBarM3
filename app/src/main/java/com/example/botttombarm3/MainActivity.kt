@@ -42,7 +42,7 @@ class MainActivity : ComponentActivity() {
                 val currentRoute by navController.currentRouteAsState()
                 Scaffold(
                     modifier = Modifier.fillMaxSize(),
-                    topBar = { TopBar() },
+                    topBar = { TopBar(navController = navController)},
                     floatingActionButton = {
                         Box() {
                             FloatingActionButton(
@@ -50,7 +50,7 @@ class MainActivity : ComponentActivity() {
                                 shape = CircleShape,
                                 modifier = Modifier
                                     .align(Alignment.Center)
-                                    .size(80.dp)
+                                    .size(70.dp)
                                     .offset(y = 70.dp)
                             ) {
                                 Image(
@@ -64,6 +64,7 @@ class MainActivity : ComponentActivity() {
                     },
                     floatingActionButtonPosition = FabPosition.Center,
                     bottomBar = {
+
                         BottomNavBar(
                             navController = navController,
                             currentSelectedScreen = currentSelectedScreen
