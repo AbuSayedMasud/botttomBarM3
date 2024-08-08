@@ -40,7 +40,10 @@ fun TopBar(navController: NavController) {
                     text = when (currentRoute) {
                         "home" -> "Home"
                         "search" -> "Search"
-                        "home_detail" -> "Home"
+                        "home_detail" -> "Home Details"
+                        "favorites" -> "Favorite"
+                        "profile" -> "Profile"
+                        "book_reader"->"Search Details"
                         else -> "App"
                     },
                     textAlign = TextAlign.Center,

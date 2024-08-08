@@ -13,12 +13,14 @@ import androidx.compose.material3.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.NavHostController
 
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun HomeDetailScreen(
-    onBack: () -> Unit
+    onBack: () -> Unit,navController: NavHostController
 ) {
     Scaffold {
         Box(modifier = Modifier.fillMaxSize()) {
@@ -33,7 +35,7 @@ fun HomeDetailScreen(
                     .align(Alignment.Center),
 
                 onClick = {
-                    onBack()
+navController.navigate("home")
                 }
             ){
                 Text( text = "Go Back",)
